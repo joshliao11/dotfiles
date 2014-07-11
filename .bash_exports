@@ -1,0 +1,33 @@
+# vim: set ft=sh:
+
+case $(uname -s) in
+    Linux)
+        export GREP_OPTIONS='--color=auto --mmap --exclude-dir=\.git --exclude=*\.swp'
+        ;;
+    Darwin)
+        export GREP_OPTIONS='--color=auto --mmap --exclude=\.git --exclude=*\.swp'
+        ;;
+    FreeBSD)
+        export GREP_OPTIONS='--color=auto --mmap --exclude=\.git --exclude=*\.swp'
+        ;;
+esac
+
+export LC_ALL=en_US.UTF-8
+export EDITOR="vim"
+export DEBFULLNAME="Josh Liao"
+export DEBEMAIL="josh_liao@pixnet.tw"
+export GREP_COLOR="1;33"
+
+# unstaged (*) and staged (+)
+#export GIT_PS1_SHOWDIRTYSTATE=1
+# If something is stashed then a '$' will be shown next to the branch name.
+export GIT_PS1_SHOWSTASHSTATE=1
+# If there're untracked files, then a '%' will be shown next to the branch name.
+#export GIT_PS1_SHOWUNTRACKEDFILES=1
+# A "<" indicates you are behind, ">" indicates you are ahead, and "<>" indicates you have diverged.
+export GIT_PS1_SHOWUPSTREAM="auto"
+
+# PS1 color non-printable 要用 \[ \] wrap \033[0;33m
+export PS1='\u\[\033[0;33m\]@\H[\j] \[\033[0;36m\]\w\[\033[0m\]$(__git_ps1 "\[\033[1;32m\](%s)\[\033[0m\]") \[\033[1;30m\]»\[\033[0;37m\]»\[\033[1;37m\]» \[\033[0m\]'
+
+export PATH="$HOME/bin:$PATH"
