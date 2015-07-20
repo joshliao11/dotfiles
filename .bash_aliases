@@ -36,7 +36,7 @@ alias composer='php -d allow_url_fopen=On ~/bin/composer.phar'
 
 alias v='vim'
 alias mk='make'
-alias mdpo='make; make deploy'
+alias mkdp='make; make deploy'
 
 alias gst='git status'
 alias gci='git commit -m'
