@@ -34,6 +34,10 @@ alias findswp="find . -name '*.swp'"
 alias delswp="findswp; find . -name '*.swp' | xargs rm"
 alias composer='php -d allow_url_fopen=On ~/bin/composer.phar'
 
+alias renamephp='for file in *.html ; do mv "$file" "${file/.html/.php}"; done'
+alias chmodfolder='find * -type d -print0 | xargs -0 chmod 0755'
+alias chmodfile='find . -type f -print0 | xargs -0 chmod 0644'
+
 alias v='vim'
 alias mk='make'
 alias mkdp='make; make deploy'
