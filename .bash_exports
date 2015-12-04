@@ -32,3 +32,6 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 export PS1='\u\[\033[0;33m\]@\H[\j] \[\033[0;36m\]\w\[\033[0m\]$(__git_ps1 "\[\033[1;32m\](%s)\[\033[0m\]") \[\033[1;30m\]»\[\033[0;37m\]»\[\033[1;37m\]» \[\033[0m\]'
 
 export PATH="$HOME/bin:$PATH"
+
+#for aqua
+export PIXLIBRARYPATH="/net/account/pixuser/joshliao/work/pixlibrary/init.inc.php"
