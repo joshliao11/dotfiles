@@ -17,6 +17,7 @@ export EDITOR="vim"
 export DEBFULLNAME="Josh Liao"
 export DEBEMAIL="josh_liao@pixnet.tw"
 export GREP_COLOR="1;33"
+export OSTYPE=uname
 
 # unstaged (*) and staged (+)
 #export GIT_PS1_SHOWDIRTYSTATE=1

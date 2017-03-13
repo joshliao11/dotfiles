@@ -46,6 +46,10 @@ work() {
 cloneevent() {
     git clone git@git.srv.pixnet:event-$1 ~/work/pixevents/pixnet/$1
 }
+
+pbre() {
+    php ~/work/scripts/pbr_export.php $1
+}
 alias tmux="tmux -2"
 alias today="date '+%Y%m%d'"
 alias h='history'
@@ -66,7 +70,8 @@ alias composer='php -d allow_url_fopen=On ~/bin/composer.phar'
 alias renamephp='for file in *.html ; do mv "$file" "${file/.html/.php}"; done'
 alias chmodfolder='find * -type d -print0 | xargs -0 chmod 0755'
 alias chmodfile='find . -type f -print0 | xargs -0 chmod 0644'
-alias copytemplate='rsync -av --progress ~/work/pixevents-template/ . --exclude={".git","README","fingerprint.txt"}'
+alias cpevent='rsync -av --progress ~/work/pixevents-template/event/ . --exclude={".git","README","fingerprint.txt"}'
+alias cpmvc='rsync -av --progress ~/work/pixevents-template/mvc/ . --exclude={".git","README","fingerprint.txt"}'
 
 alias v='vim'
 alias mk='make'
